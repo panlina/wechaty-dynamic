@@ -1,0 +1,11 @@
+{
+  "name": "wechaty-dynamic",
+  "version": "0.0.0",
+  "description": "A Wechaty plugin to install/uninstall plugins dynamically",
+  "keywords": ["wechaty", "dynamic"],
+  "author": "Jack Lu <jacklu@jacklu.me>",
+  "license": "ISC",
+  "peerDependencies": {
+    "wechaty": "^0.60.10"
+  }
+}
