@@ -14,6 +14,11 @@ module.exports = function WechatyDynamicPlugin(config) {
 		var plugin = {};
 		var app = express();
 		app.use(express.json());
+		app.get('/plugin', (req, res) => {
+			var file = path.join(config.dir, 'plugin.json');
+			let plugin = JSON.parse(fs.readFileSync(file, 'utf8'));
+			res.json(plugin);
+		});
 		app.put('/plugin/:name', (req, res) => {
 			var installer = importFresh(req.body.module);
 			var uninstaller = installer(bot);
